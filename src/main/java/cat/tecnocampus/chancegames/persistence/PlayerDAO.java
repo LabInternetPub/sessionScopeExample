@@ -3,10 +3,9 @@ package cat.tecnocampus.chancegames.persistence;
 import domain.Player;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-//@Repository
-@Component
+@Repository
 public class PlayerDAO {
     private JdbcTemplate jdbcTemplate;
 
