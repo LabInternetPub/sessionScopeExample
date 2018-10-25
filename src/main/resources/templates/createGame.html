@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Game</title>
+</head>
+<body>
+
+<form method="POST" th:object="${userForm}" >
+    <table>
+        <tr>
+            <td valign = "top"><label>Username: </label></td>
+            <td><input type="text" th:field="*{username}" style="font-size: 12pt;width: 200px;"/><br/></td>
+        </tr>
+        <tr>
+            <td valign = "top"><label>Game: </label></td>
+            <td><input type="text" th:field="*{game}" style="font-size:12pt;width: 200px;"/><br/></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" style="font-size: 12pt;" value="New Game"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

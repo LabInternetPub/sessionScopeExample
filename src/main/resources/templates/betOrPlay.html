@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bet a Number</title>
+</head>
+<body>
+
+<h1>Dear <span th:text="${username}"/> <span></h1>
+<h2>These are your bets</h2>
+<ul>
+    <li th:each="bet: ${bettings}">
+        Number: <span th:text="${bet.getKey()}" /> Quantity: <span th:text="${bet.getValue()}"/>
+    </li>
+</ul>
+
+<h1>Do you want to bet again?</h1>
+<form method="POST" th:object="${betForm}" action="/betNumber">
+    <table>
+        <tr>
+            <td valign = "top"><label>Number: </label></td>
+            <td><input type="text" th:field="*{number}" style="font-size: 12pt;width: 200px;"/><br/></td>
+        </tr>
+        <tr>
+            <td valign = "top"><label>Quantity: </label></td>
+            <td><input type="text" th:field="*{quantity}" style="font-size:12pt;width: 200px;"/><br/></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" style="font-size: 12pt;" value="Bet!!!"/></td>
+        </tr>
+    </table>
+</form>
+
+<br>
+<h1>You can play without additional bettings</h1>
+<form method="POST" action="/play">
+    <table>
+        <tr>
+            <td><input type="submit" style="font-size: 12pt;" value="---- Play! ------"/></td>
+        </tr>
+    </table>
+</form>
+
+<br>
+<form method="GET" action="/newGame">
+    <table>
+        <tr>
+            <td><input type="submit" style="font-size: 12pt;" value="----- Cancel the game ------"/></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
