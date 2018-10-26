@@ -14,8 +14,4 @@ public class NotBetYetState extends GameSate {
         this.game.setBetNumber(number,quantiy);
     }
 
-    @Override
-    public int play() {
-        throw new RuntimeException("You should have betNumber before playing");
-    }
 }

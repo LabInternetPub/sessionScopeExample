@@ -19,6 +19,7 @@ public class GameController {
 
     public GameController(PlayerDAO playerDAO) {
         this.playerDAO = playerDAO;
+        this.player = new Player("no session player", 0);
     }
 
     public void createPlayer(String username) {

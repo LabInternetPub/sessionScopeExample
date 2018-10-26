@@ -13,8 +13,4 @@ public class OnlyPlayState extends GameSate {
         throw new RuntimeException("You've already betNumber");
     }
 
-    @Override
-    public int play() {
-        return super.play();
-    }
 }

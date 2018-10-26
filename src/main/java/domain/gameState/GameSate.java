@@ -15,6 +15,7 @@ public abstract class GameSate {
     }
 
     public abstract void betNumber(int number, int quantity);
+
     public int play() {
         int winner = randomNumberGenerator.nextInt(10);
         game.setWinnerNumber(winner);

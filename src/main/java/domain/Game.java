@@ -8,6 +8,8 @@ public interface Game {
 
     void betNumber(int number, int quantity);
     int play();
+
+
     String getName();
 
     void setBetNumber(int number, int quantity);
